@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add friend</title>
+    <style>
+        .profileinfo{
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            flex-direction: column;
+            margin: auto;
+
+        }
+     img{
+        border: 2px solid rgb(27, 24, 24);
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+     }
+     button{
+        width: 150px;
+        padding: 15px;
+        background-color: green;
+        margin: 20px;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+     }
+    </style>
+</head>
+<body>
+    <div class="profileinfo">
+        <img src="https://i0.wp.com/images.indianexpress.com/2023/06/Virat-Kohli-7.jpg?strip=all" alt="profile" >
+         <h2 id="friend"></h2>  
+        <button id="profile" onclick="show()" >add friend</button>
+    </div>
+    
+
+    <script>
+       function show(){
+   var fr=  document.getElementById("profile");
+    let addfr=document.getElementById("friend");
+       if(fr.innerText=="add friend" ){
+        fr.innerText=" unfriend";
+        fr.style.background='blue';
+        alert("your are  succesfully add friend list ");
+        addfr.innerHTML="you are a now friend"
+
+       }
+       else {
+        fr.innerHTML="add friend";
+        addfr.innerHTML="";
+       }
+       }
+    </script>
+</body>
+</html>
